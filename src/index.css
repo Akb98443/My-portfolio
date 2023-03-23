@@ -1,0 +1,224 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&family=Ubuntu:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;    
+    outline: 0;
+
+}
+
+:root{
+    --primary-hue : 103;
+    --black-lightness: 15%;
+    --dark-lightness: 44%;
+    --light-lightness: 94%;
+    --white-lightness:100%;
+    --color-primary : hsla(120, 100%, 32%, 1);
+    /* hsl(var(--primary-hue) , 89% , 41%); */
+    --color-white : #0e190b;
+    /* hsl(0,5%, var(--white-lightness)); */
+    --color-light : #020a00;
+    /* hsl(var(--primary-hue) , 5% , var(--light-lightness)); */
+    --color-black : hsla(106, 58%, 89%, 1);
+    /* hsl(var(--primary-hue) , 5% , var(--black-lightness)); */
+    --color-dark : hsla(329, 58%, 99%, 1);
+    /* hsl(var(--primary-hue) ,5% , var(--dark-lightness)); */
+
+
+    /* General container variable */
+
+    --container-width-lg :76%;
+    --cotainer-width-md :90%;
+
+    /* Border Radious Variables */
+
+    --border-radius-1 : 1.2rem;
+    --border-radius-2 : 0.8rem;
+    --border-radius-3 : 0.5rem;
+
+    /* General transition variable */
+    --transition : all 500ms ease;
+
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    line-height: 1.6;
+    font-size: 0.9 rem;
+
+}
+small{
+    color: var(--color-black);
+}
+p{
+    color: var(--color-black);
+
+}
+/* General container Class */
+
+.container {
+    width: var(--container-width-lg);
+    margin-inline: auto;
+    max-width: 1900px;
+}
+
+section {
+    padding: 10rem 0;
+    background: var(--color-light);
+    transition: var(--transition);
+background-image: url("https://www.transparenttextures.com/patterns/subtle-dark-vertical.png");
+}
+
+section:nth-child(even) {
+    background: var(--color-white);
+background-image: url("https://www.transparenttextures.com/patterns/navy.png");
+
+}
+
+section > h2{ /*This means the direct child of the section */
+text-align: center;
+}
+
+section > p{
+    text-align: center;
+    margin: 0.5rem auto 4rem;
+    width: 40%;
+}
+
+/* GERERAL SECTION STYLE */
+
+a{
+    color: var(--color-dark);
+    transition: var(--transition);
+}
+
+/* GERERAL HEADING STYLE */
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--color-black);
+    line-height: 1.1rem;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.1rem;
+}
+h5{
+    font-size: 0.95rem;
+}
+h6{
+    font-size: o.5rem;
+}
+
+/* GERERAL IMAGES STYLE */
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* GERERAL BUTTONS STYLE */
+
+.btn{
+    display: inline-block;
+    display: flex;
+    width:fit-content ;
+    gap: 1rem;
+    background: var(--color-light);
+    color: var(--color-black);
+    padding: 0.6rem 1.5rem;
+    border: 2px solid transparent;
+    align-items: center;
+    cursor: pointer;
+    border-radius: var(--border-radius-2);
+
+}
+.btn:hover{
+    background-color: transparent;
+    border-color: var(--color-light);
+    transform: translateY(-0.5rem);
+}
+
+.btn.white{
+    background: var(--color-white);
+}
+
+.btn.white:hover {
+    background: transparent;
+    border-color: var(--color-white);
+}
+.btn.primary{
+    background: var(--color-primary);
+    color: white;
+}
+
+.btn.primary:hover{
+    background-color: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn.sm{
+    padding: 0.5rem 1.2rem;
+}
+
+@media screen and(max-width:1024px) {
+    body {
+        font-size: 1rem;
+    }
+    .container{
+        width: var(--cotainer-width-md);
+    }
+
+    section > p {
+        width: 72%;
+        margin-bottom: 3rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+}
+
+@media screen and(max-width:600px) {
+    body {
+        font-size: 1rem;
+    }
+    
+
+    section > p {
+        width: var(--cotainer-width-md);
+
+    }
+    h1{
+        font-size: 2.4rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    h4{
+        font-size: 1rem;
+    }
+    .btn {
+        padding: 0.6rem 1.5rem;
+    }
+}
+
